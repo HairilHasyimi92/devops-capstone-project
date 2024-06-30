@@ -126,7 +126,7 @@ class TestAccountService(TestCase):
     # ADD YOUR TEST CASES HERE ...        
     def test_get_account_list(self):
         """should get list of accounts"""
-        self.create_accounts(5)
+        self._create_accounts(5)
         resp = self.client.get(BASE_URL)
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         data = resp.get_json()
